@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PlaygroundController">
+   <children>
+      <MenuBar onKeyPressed="#run" prefHeight="32.0" prefWidth="1200.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Datei">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Bestenliste" />
+                  <MenuItem mnemonicParsing="false" text="Zurück zum Startmenü" />
+              <MenuItem fx:id="mi_close" mnemonicParsing="false" onAction="#close" text="Beenden" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Bearbeiten">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Optionen" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Hilfe">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Tastenbelegung" />
+              <MenuItem mnemonicParsing="false" text="Info" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane fx:id="grd_map" gridLinesVisible="true" layoutX="354.0" layoutY="54.0" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #121270;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="7" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="9" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="11" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="15" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="15" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="20" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="23" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="16" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="22" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="22" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="23" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="23" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="6" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="4" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="2" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="23" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="17" GridPane.rowIndex="2" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="15" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="17" GridPane.rowIndex="2" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="19" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="19" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="19" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="17" GridPane.rowIndex="22" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="17" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="22" GridPane.rowIndex="23" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="22" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="22" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="18" GridPane.rowIndex="14" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="22" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="22" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="18" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="22" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="19" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="21" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="20" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="22" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="19" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="22" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="15" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="19" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="20" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="21" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121270;" GridPane.columnIndex="22" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="17" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="22" GridPane.rowIndex="1" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Region prefHeight="32.0" prefWidth="59.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="23" GridPane.rowIndex="14" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="2" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="7" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="9" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="20" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="16" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="16" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="17" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="15" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="20" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="21" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="20" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="17" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="19" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="9" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="15" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="15" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="18" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="7" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Region prefHeight="47.0" prefWidth="32.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="15" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="20" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="4" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="21" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="17" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="18" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="19" GridPane.rowIndex="3" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="16" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="15" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="12" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="13" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="12" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="10" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="15" GridPane.rowIndex="8" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="5" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="11" GridPane.rowIndex="6" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="13" GridPane.rowIndex="6" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="14" GridPane.rowIndex="6" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.rowIndex="11" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="24" GridPane.rowIndex="9" />
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" GridPane.columnIndex="24" GridPane.rowIndex="11" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="9">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="18">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="18">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="12">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="12">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="18">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="8">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="20" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="8">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="9">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="23" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="12">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="12">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="15">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="18">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="21">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="19" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="22">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="21">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="20">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="18">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="18">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="16">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="15">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="14">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="frodo" fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Frodo.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="11">
+               <image>
+                  <Image url="@../../Nazgul.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="12">
+               <image>
+                  <Image url="@../../Nazgul.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="11">
+               <image>
+                  <Image url="@../../Nazgul.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@../../Ring.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Label layoutX="44.0" layoutY="98.0" text="Punkte:" textFill="#bcb077">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb_points" layoutX="138.0" layoutY="98.0" prefHeight="21.0" prefWidth="90.0" text="0" textAlignment="CENTER" textFill="#bcb077">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.PlaygroundController">
+   <children>
+      <AnchorPane prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: #000000;">
+         <children>
+            <Pane fx:id="map" layoutX="400.0" layoutY="85.0" prefHeight="750.0" prefWidth="743.0" style="-fx-background-color: #121270;">
+               <children>
+                  <ImageView fitHeight="750.0" fitWidth="752.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../map.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="frodo" fitHeight="28.0" fitWidth="25.0" layoutX="10.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Frodo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutY="321.0" prefHeight="1.0" prefWidth="143.0" />
+                  <Separator layoutX="141.0" layoutY="240.0" orientation="VERTICAL" prefHeight="83.0" prefWidth="5.0" />
+                  <Separator layoutY="383.0" prefHeight="3.0" prefWidth="143.0" />
+                  <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="293.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Nazgul.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="356.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Nazgul.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="419.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Nazgul.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btn_start" layoutX="46.0" layoutY="537.0" mnemonicParsing="false" onAction="#startGame" text="Start" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
