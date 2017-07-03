@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class HauptmenueController extends Application {
+public class MenuController extends Application {
 
 	public static Stage stage;
 
