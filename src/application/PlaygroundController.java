@@ -96,7 +96,6 @@ public class PlaygroundController extends Application {
 
 		frodo.setTranslateX(newPosX);
 
-		// return newPosX;
 	}
 
 	public void moveRight(double posX) {
@@ -104,7 +103,6 @@ public class PlaygroundController extends Application {
 
 		frodo.setTranslateX(newPosX);
 
-		// return newPosX;
 	}
 
 	public void moveUp(double posY) {
@@ -112,7 +110,6 @@ public class PlaygroundController extends Application {
 
 		frodo.setTranslateY(newPosY);
 
-		// return newPosY;
 	}
 
 	public void moveDown(double posY) {
@@ -120,7 +117,6 @@ public class PlaygroundController extends Application {
 
 		frodo.setTranslateY(newPosY);
 
-		// return newPosY;
 	}
 
 	public void collectRing() {
