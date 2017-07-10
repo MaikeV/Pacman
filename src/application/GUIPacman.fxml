@@ -19,7 +19,7 @@
    <children>
       <ImageView fitHeight="850.0" fitWidth="800.0" pickOnBounds="true" smooth="false">
          <image>
-            <Image url="@../../../../../../Desktop/Gif.gif" />
+            <Image url="@../../resources/MainMenuBackground.gif" />
          </image>
       </ImageView>
       <Button fx:id="btn_newGame" defaultButton="true" layoutX="300.0" layoutY="425.0" mnemonicParsing="false" onAction="#startGame" onMouseClicked="#startGame" prefHeight="50.0" prefWidth="200.0" style="-fx-border-radius: 12px; -fx-background-color: #121270; -fx-border-color: #BCB277; -fx-background-radius: 12px;" text="Neues Spiel" textAlignment="CENTER" textFill="#bcb077">
